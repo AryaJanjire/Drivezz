@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking Form</title>
+    <link rel="stylesheet" href="CSS/bus_form.css">
+    <link rel="stylesheet" href="CSS/bus_tooplate-style.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script>
+    $(function(){
+        $("#navbar").load("navbar.html");
+    });
+</script>
+<script>
+    $(function(){
+        $("#footer").load("footer.html");
+    });
+</script>
+<style>
+    input[type="date"]::before { 
+        content: attr(data-placeholder);
+        width: 100%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    input[type="date"]:focus::before,
+    input[type="date"]:valid::before { display: none 
+    }
+
+    input[type="time"]::before { 
+        content: attr(data-placeholder);
+        width: 100%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    input[type="time"]:focus::before,
+    input[type="time"]:valid::before { display: none }
+
+    ::placeholder{
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+    }
+    body {font-family: Arial, Helvetica, sans-serif;}
+
+</style>
+</head>
+<body>
+    <div class="container"><!--container-->
+
+        <form class="form-group"><!--form-->
+            
+
+            <div id="form"><!--form-->
+                <h3 class="text-white">Drivzzz Bus Booking</h3>
+
+            <div id="input"><!--input-->
+                <input type="text" id="input-group" placeholder="From" required>
+                <input type="text" id="input-group" placeholder="To" required>
+                <input type="text" id="depdate" placeholder="Departure Date"
+                    onfocus="(this.type='date')"
+                    onblur="(this.type='text')" required>
+                <input type="text" id="input-group" placeholder="Departure Time"
+                    onfocus="(this.type='time')"
+                    onblur="(this.type='text')" required>
+                    <select  id="input-group" style="background: black;" required>
+                        <option value="">Preffered Bus</option>
+                        <option value="">Luxury Bus</option>
+                        <option value="">Sleeper Bus</option>
+                        <option value="">Mini Bus</option>
+                </select>
+                <select  id="input-group" style="background: black;" required>
+                    <option value="">Preffered Seating</option>
+                    <option value="">Economy Class</option>
+                    <option value="">Business Class</option>
+                    <option value="">First Class</option>
+                </select>
+                </div><!--input-->
+
+                <div id="input2"><!--input2-->
+                    <input type="number" id="input-group" placeholder="Adult" required>
+                    <input type="number" id="input-group" placeholder="Children(2-11years)" required>
+                    <input type="number" id="input-group" placeholder="infant(under 2years)" required>
+                </div><!--input2-->
+
+                <div id="input3"><!--input3-->
+                    <span id="input-group" class="text-primary">Select Your Fare</span> 
+                    <input type="radio" id="input-group" name="r">
+                    <label class="text-white" for="input-group">One Way</label>
+                    <input type="radio" id="input-group" name="r">
+                    <label class="text-white" for="input-group">Round Trip</label>
+                </div><!--input3-->
+
+                <div id="input4"><!--input4-->
+                    <input type="text" id="retdate" placeholder="Return Date"
+                        onfocus="(this.type='date')"
+                        onblur="(this.type='text')" required>
+                     <input type="text" id="input-group" placeholder="Return Time"
+                        onfocus="(this.type='time')"
+                        onblur="(this.type='text')" required>
+                    <input type="text" id="input-group1" placeholder="Any Message">
+                </div><!--input4-->
+
+                <div id="input5"><!--input5-->
+                    <h3 class="text-white">Personal Details</h3>
+                </div><!--input5-->
+
+                <div id="input6"><!--input6-->
+                    <input type="text" id="input-group" placeholder="Full Name" required>
+                    <input type="number" id="input-group" placeholder="Phone Number" minlength="10" maxlength="10" required >
+                    <input type="email" id="input-group1" placeholder="Email" required>
+                    <div class="form-row" style="margin-top:13px; background-color: #11101D;
+                    color: #ffffff;" >
+                        <h6> Your identity proof: </h6><input type="file" name="iddocument" required>
+                </div><!--input6-->
+                <button type="submit" id="submit_button" class="btn btn-primary">Submit Form</button>
+                <button type="reset" id="submit_button" class="btn btn-primary">Clear Form</button>
+            </div><!--form-->
+
+        </form><!--form-->
+
+    </div><!--container-->
+    <script>
+            var currentDateTime = new Date();
+            var year = currentDateTime.getFullYear();
+            var month = (currentDateTime.getMonth() + 1);
+            var date = (currentDateTime.getDate() + 1);
+
+            if(date < 10) {
+                date = '0' + date;
+            }
+            if(month < 10) {
+                month = '0' + month;
+            }
+       
+            var dateTomorrow = year + "-" + month + "-" + date;
+            var checkinElem = document.querySelector("#depdate");
+            var checkoutElem = document.querySelector("#retdate");
+
+            checkinElem.setAttribute("min", dateTomorrow);
+
+                checkinElem.onchange = function () {
+                checkoutElem.setAttribute("min", this.value);
+            }
+
+            function changeTab(ref){
+                try {
+                    if(ref.getAttribute("data-tab") == "tab_intracity"){
+                    document.getElementById("form-body").classList.remove('active');
+                    ref.parentNode.classList.remove('tab_outstation');
+                } else {
+                    document.getElementById("form-body").classList.add('active');
+                    ref.parentNode.classList.add('tab_outstation');
+                }
+                } catch(msg){
+                    console.log(msg);
+                }
+            }
+        </script>
+</body>
+</html>

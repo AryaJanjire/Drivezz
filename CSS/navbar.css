@@ -1,0 +1,31 @@
+.navbar-brand
+{
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-left: 20px;
+    color: #fff;
+}
+
+.navbar-text {
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+}
+
+.nav-item
+{
+    padding: 0 18px ;
+}
+
+.nav-link
+{
+    font-size: 1.2rem; 
+    font-family: 'Montserrat-light';
+}
+
+.navbar
+{
+    padding: 0;
+}

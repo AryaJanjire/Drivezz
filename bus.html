@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bus Booking</title>
+
+    <!-- Bootstrap -->
+    <link href="CSS/bootstrap.min.css" rel="stylesheet" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+	<link rel="stylesheet" href="CSS/font-awesome.min.css">
+	<link rel="stylesheet" href="CSS/animate.css">
+	<link rel="stylesheet" href="CSS/overwrite.css">
+	<link href="CSS/animate.min.css" rel="stylesheet"> 
+	<link href="CSS/bus_style.css" rel="stylesheet" />
+   
+   	<link rel="stylesheet" type="text/css" href="CSS/bootstrap1.min.CSS">
+	<link rel="stylesheet" href="CSS/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="CSS/fontAwesome.css">
+	
+	<link rel="stylesheet" href="CSS/owl-carousel.css">
+	<link rel="stylesheet" href="CSS/datepicker.css">
+	<link rel="stylesheet" href="CSS/bus_tooplate-style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+	<script src="Javascript/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#navbar").load("navbar.html");
+        });
+    </script>
+    <script>
+        $(function(){
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+    </head>
+  <body>
+    <div id="navbar"></div>  	
+	<section class="banner" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="left-side">
+                        <div class="logo">
+                            <img src="Images/bus_logo.jpg" alt="Bus Template">
+                        </div>
+                        <div class="tabs-content">
+                            <h4>Choose Your Direction:</h4>
+                            <ul class="social-links">
+                                <li><a href="http://facebook.com">Find us on <em>Facebook</em><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="http://youtube.com">Our <em>YouTube</em> Channel<i class="fa fa-youtube"></i></a></li>
+                                <li><a href="http://instagram.com">Follow our <em>instagram</em><i class="fa fa-instagram"></i></a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="page-direction-button">
+                            <a href="bus_contact.html"><i class="fa fa-phone"></i>Contact Us Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <section id="first-tab-group" class="tabgroup">
+                        <div id="tab1">
+                            <div class="submit-form">
+                                <h4>Check availability for <em>direction</em>:</h4>
+                                <form id="form-submit" action="" method="get">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <label for="from">From:</label>
+                                                <select required name='from' onchange='this.form.()'>
+                                                    <option value="">Select a location...</option>
+                                                    <option value="Pune">Pune</option>
+                                                    <option value="Mumbai">Mumbai</option>
+                                                    <option value="Nagpur">Nagpur</option>
+                                                    <option value="Nashik">Nashik</option>
+                                                    <option value="Aurangabad">Aurangabad</option>
+                                                    <option value="Kolhapur">Kolhapur</option>
+                                                    <option value="Nanded">Nanded</option>
+                                                    <option value="Amravati">Amravati</option>
+                                                    <option value="Jalgaon">Jalgaon</option>
+                                                    <option value="Panvel">Panvel</option>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <label for="to">To:</label>
+                                                <select required name='to' onchange='this.form.()'>
+                                                    <option value="">Select a location...</option>
+                                                    <option value="Pune">Pune</option>
+                                                    <option value="Mumbai">Mumbai</option>
+                                                    <option value="Nagpur">Nagpur</option>
+                                                    <option value="Nashik">Nashik</option>
+                                                    <option value="Aurangabad">Aurangabad</option>
+                                                    <option value="Kolhapur">Kolhapur</option>
+                                                    <option value="Nanded">Nanded</option>
+                                                    <option value="Amravati">Amravati</option>
+                                                    <option value="Jalgaon">Jalgaon</option>
+                                                    <option value="Panvel">Panvel</option>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <label for="departure">Departure date:</label>
+                                                <input name="deparure" type="text" class="form-control date" id="deparure" placeholder="Select date..." required="" onchange='this.form.()'>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <label for="return">Return date:</label>
+                                                <input name="return" type="text" class="form-control date" id="return" placeholder="Select date..." required="" onchange='this.form.()'>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="radio-select">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                                        <label for="round">Round</label>
+                                                        <input type="radio" name="trip" id="round" value="round" required="required"onchange='this.form.()'>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                                        <label for="oneway">Oneway</label>
+                                                        <input type="radio" name="trip" id="oneway" value="one-way" required="required"onchange='this.form.()'>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <a href="bus_contact.html"><button type="submit" id="form-submit" class="btn">Order Ticket Now</button></a>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<div id="feature">
+		<div class="container">
+			<div class="row">
+				<div class="text-center">
+					<p style="font-size: 40px; font-family:serif;">Features</p>
+					<p style="font-size: 20px;font-family:Apple Chancery,cursive;">Providing you the possible BUS and Service<br>To our Customer</p>
+				</div>
+				<div class="col-md-3 wow fadeInRight" data-wow-offset="0" data-wow-delay="0.3s">
+					<div class="text-center">
+						<div class="hi-icon-wrap hi-icon-effect">
+							<i class="fa fa-laptop"></i>						
+							<h2 style="font-family:serif;">Fully</h2>
+                            <h2 style="font-family:serif;">Compatible</h2>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 wow fadeInRight" data-wow-offset="0" data-wow-delay="0.3s">
+					<div class="text-center">
+						<div class="hi-icon-wrap hi-icon-effect">
+							<i class="fa fa-heart-o"></i>
+							<h2  style="font-family:serif;">Always Ready</h2>
+                            <h2  style="font-family:serif;">& Clean</h2>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 wow fadeInLeft" data-wow-offset="0" data-wow-delay="0.3s">
+					<div class="text-center">
+						<div class="hi-icon-wrap hi-icon-effect">
+							<i class="fa fa-cloud"></i>
+							<h2  style="font-family:serif;">Fully</h2>
+                            <h2 style="font-family:serif;">A/C</h2>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 wow fadeInLeft" data-wow-offset="0" data-wow-delay="0.3s">
+					<div class="text-center">
+						<div class="hi-icon-wrap hi-icon-effect">
+							<i class="fa fa-camera"></i>
+							<h2 style="font-family:serif;">Less</h2>
+							<h2 style="font-family:serif;">Cost</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<section class="home">
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <div class="text-center">
+                <p style="font-size: 40px; font-family:serif;">Book Now</p>
+                <p style="font-size: 20px;font-family:Apple Chancery,cursive;">Book Your Bus Tickets & Wonder Around</p>
+            </div>
+        <div class="carousel-controls">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active" style="background-image:url('Images/lBus.avif')"></li>
+            <li data-target="#carousel" data-slide-to="1" style="background-image:url('Images/mBus.jpg')"></li>
+            <li data-target="#carousel" data-slide-to="2" style="background-image:url('Images/sleeperBus.jpg')"></li>
+            
+          </ol>
+          <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+           <img src="Images/left-arrow.svg" alt="Prev"> 
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+          <img src="Images/right-arrow.svg" alt="Next">
+        </a>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background-image:url('Images/lBus.avif')">
+            <div class="container">
+               <h2>Luxury Bus</h2>
+              <a href="bus_contact.html"><button class="btn btn-primary" id="submit_button" style="font-size: 20px;font-family:Apple Chancery,cursive;">Book Now</button></a> 
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image:url('Images/mBus.jpg')">
+            <div class="container">
+               <h2>Mini Bus</h2>
+               <a href="bus_contact.html"><button class="btn btn-primary" id="submit_button" style="font-size: 20px;font-family:Apple Chancery,cursive;">Book Now</button></a>
+           </div>
+          </div>
+          <div class="carousel-item" style="background-image:url('Images/sleeperBus.jpg')">
+            <div class="container">
+               <h2>Sleeper Bus</h2>
+               <a href="bus_contact.html"><button class="btn btn-primary" id="submit_button" style="font-size: 20px;font-family:Apple Chancery,cursive;">Book Now</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+       </section>
+      
+	<div id="pricing">
+		<div class="container">
+			<div class="text-center">
+				<p style="font-size: 40px; font-family:serif;">Pricing Table</p>
+				<p style="font-size: 20px;font-family:Apple Chancery,cursive;">Here you can Select the According to your pocket & according to your comfort</p>
+				
+			</div>
+			
+			<div class="pricing-area text-center">
+                <div class="row">
+                    <div class="col-sm-4 plan price-one wow fadeInDown" data-wow-offset="0" data-wow-delay="0.2s">
+                        <ul>
+                            <li class="heading-one">
+                                <h2>High Class</h2>
+                                <span>1200</span>
+                            </li>
+                            <li> High Speed WI-Fi</li>
+                            <li>Air Conditioning</li>
+                            <li>Sleeping Seat</li>
+                            <li>In-built Washrooms</li>
+                            <li>Food</li>
+                            <li class="plan-action">
+                                <a href="" class="btn btn-primary">Sign up</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-4 plan price-two wow fadeInDown" data-wow-offset="0" data-wow-delay="0.6s">
+                        <ul>
+                            <li class="heading-two">
+                                <h2>Standard Class</h2>
+                                <span>1100</span>
+                            </li>
+                            <li>Air Conditioning</li>
+                            <li>High Speed WI-Fi</li>
+                            <li>Additional Legroom</li>
+                            <li>Sleeping Seat</li>
+                            <li>Food</li>
+                            <li class="plan-action">
+                                <a href="" class="btn btn-primary">Sign up</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-4 plan price-three wow fadeInDown" data-wow-offset="0" data-wow-delay="0.9s">
+                        <img src="Images/ri.png">
+                        <ul>
+                            <li class="heading-three">
+                                <h2>Premium Class</h2>
+                                <span>1000</span>
+                            </li>
+                            <li>Taking the Scenic Route</li>
+                            <li>High Speed WI-Fi</li>
+                            <li>Mobile Charging Point</li>
+                            <li>Sleeping Seat</li>
+                            <li>Food</li>
+                            <li class="plan-action">
+                                <a href="" class="btn btn-primary">Sign up</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 plan price-four wow fadeInLeft">
+                        <ul>
+                            <li class="heading-four">
+                                <h2>Basic Class</h2>
+                                <span>800</span>
+                            </li>
+                            <li>Bus Attendant</li>
+                            <li>Mobile Charging Point</li>
+                            <li>Window Seat</li>
+                            <li>Refreshments</li>
+                            <li class="plan-action">
+                                <a href="" class="btn btn-primary">Sign up</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 plan price-five wow fadeInLeft">
+                        <ul>
+                            <li class="heading-five">
+                                <h2>Basic Standard class</h2>
+                                <span>600</span>
+                            </li>
+                            <li>Comfortable Seats</li>
+                            <li>Mobile Charging Point</li>
+                            <li>Spotlessly Clean Bus</li>
+                            <li>Refreshments</li>
+                            <li class="plan-action">
+                                <a href="" class="btn btn-primary">Sign up</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 plan price-six wow fadeInRight">
+                         <img src="Images/rib.png">
+                        <ul>
+                            <li class="heading-six">
+                                <h2>Basic Premium Class</h2>
+                                <span>500</span>
+                            </li>
+                            <li>Pocket Friendly</li>
+                            <li>Direct Trip(no stop)</li>
+                            <li>Comfortable Seats</li>
+                            <li>Refreshments</li>
+                            <li class="plan-action">
+                                <a href="" class="btn btn-primary">Sign up</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 plan price-seven wow fadeInRight">
+                        <ul>
+                            <li class="heading-seven">
+                                <h2>VIP</h2>
+                                <span>2000</span>
+                            </li>
+                            <li>Business Class-Sized Seats</li>
+                            <li>High Speed WI-Fi</li>
+                            <li>Adjacent Seats to Spread Out</li>
+                            <li>Food</li>
+                            <li class="plan-action">
+                                <a href="" class="btn btn-primary">Sign up</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!--/pricing-area-->			
+		</div>
+	</div><!--/#pricing-->
+	
+	<div id="our-team">
+		<div class="container">
+			<div class="text-center">
+				<p style="font-size: 40px; font-family:serif;">Our Agents</p>
+				<p style="font-size: 20px;font-family:Apple Chancery,cursive;">They will help you Solve your Problem & Provide best Facility to you</p>
+			</div>
+			<div class="row">
+				<div class="col-md-4 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
+					<div class="text-center">
+						<img src="Images/avtar2.webp" alt="">
+						<h2>Priya</h2>
+						<h4>Manager</h4>
+						<p>Phone No-9854638276</p>
+					</div>
+				</div>
+				<div class="col-md-4 wow bounceInDown" data-wow-offset="0" data-wow-delay="0.3s">
+					<div class="text-center">
+						<img src="Images/avtar3.webp" alt="">
+						<h2>Rohini</h2>
+						<h4>Assitent Manager</h4>
+						<p>Phone No-9845389053</p>
+					</div>
+				</div>
+				<div class="col-md-4 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
+					<div class="text-center">
+						<img src="Images/avtar1.webp" alt="">
+						<h2>Ankur</h2>
+						<h4>Driver</h4>
+						<p>Phone No-8856480035</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+		
+	
+	<footer>
+		<div id="contact">
+			<div class="container">
+				<div class="text-center">
+					<p style="font-size: 40px; font-family:serif;">Contact Us</p>
+					<p style="font-size: 20px;font-family:Apple Chancery,cursive;">We are very Glade to Help You</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.2s">
+						<h3>Contact us any time</h3>
+						<h6 style="color: black;">+919945600000<br>+9188654390765</h6>				
+					</div>				
+					
+					<div class="col-md-4 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.4s">
+						<h2>Contact Info</h2>
+						<ul>
+							<li><i class="fa fa-home fa-2x"></i> Office 38, Lajpat Nagar, NEW DELHI, INDIA</li><hr>
+							<li><i class="fa fa-phone fa-2x"></i>8749359076</li><hr>
+							<li><i class="fa fa-envelope fa-2x"></i> travel@xyz.net</li>
+						</ul>
+					</div>
+					
+					<div class="col-md-4 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.6s">  	
+					    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                        <div id="errormessage"></div>
+                        <form action="" method="post" role="form" class="contactForm">
+                                <div class="form-group">
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                        <div class="validation"></div>
+                                </div>
+                                <div class="form-group">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                        <div class="validation"></div>
+                                </div>
+                                <div class="form-group">
+                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                        <div class="validation"></div>
+                                </div>
+                                <div class="form-group">
+                                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                                        <div class="validation"></div>
+                                </div>
+                            
+                            <button type="submit" class="btn btn-theme pull-left">SEND MESSAGE</button>
+                        </form>
+					</div>	
+				</div>
+			</div>
+		</div><!--/#contact-->					
+		<div id="footer"></div> 			
+		
+    <script src="Javascript/jquery-2.1.1.min.js"></script>		
+    <script src="Javascript/bootstrap.min.js"></script>	
+	<script src="Javascript/parallax.min.js"></script>
+	<script src="Javascript/wow.min.js"></script>
+	<script src="Javascript/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="Javascript/fliplightbox.min.js"></script>
+	<script src="Javascript/functions.js"></script>
+    <script src="contactform/contactform.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="Javascript/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="Javascript/vendor/bootstrap.min.js"></script>
+    
+    <script src="Javascript/datepicker.js"></script>
+    <script src="Javascript/plugins.js"></script>
+    <script src="Javascript/main.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    
+</body>
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script>
+        $(function(){
+            $("#navbar").load("navbar.html");
+        });
+    </script>
+    <script>
+        $(function(){
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+<body>  
+    <header class="header">
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <a href="index.html" class="logo" style="margin-left: 0px;"> Drivzzz </a>
+    <div id="navbar"></div> 
+    <div id="login-btn">
+        <button class="btn"></button>
+        <i class="far fa-user"></i>
+    </div>    
+    <nav class="navbar">
+            
+            <a href="#home">Login &nbsp;&nbsp;&nbsp;</a>
+            <a href="#vehicles">Signup&nbsp;&nbsp;&nbsp;</a>
+            <a href="#services">Reviews</a>
+        </nav>
+
+</header> 
+    
+<div class="login-form-container">
+
+    <span id="close-login-form" class="fas fa-times"></span>
+
+    <form action="">
+        <h3>user login</h3>
+        <input type="email" placeholder="email" class="box">
+        <input type="password" placeholder="password" class="box">
+        <p> forget your password <a href="#">click here</a> </p>
+        <input type="submit" value="login" class="btn">
+        <p>or login with</p>
+        <div class="buttons">
+            <a href="#" class="btn"> google </a>
+            <a href="#" class="btn"> facebook </a>
+        </div>
+        <p> don't have an account <a href="#">create one</a> </p>
+    </form>
+
+</div>
+
+<!--Rent Section-->
+
+<section class="home" id="home">
+
+    <h3 class="ride">Rent a Vehicle</h3>
+
+    <img class="ride" src="Images/newbg.jpg" alt="">
+
+    <a  href="RentalForm.html" class="btn rent">Book Now</a>
+
+</section>
+
+<!--Icons Section-->
+<section class="icons-container">
+
+    <div class="icons">
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="content">
+            <h3>Intercity</h3>
+            <p>Trips</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-car"></i>
+        <div class="content">
+            <h3>One/Two way</h3>
+            <p>Trips</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-users"></i>
+        <div class="content">
+            <h3>320+</h3>
+            <p>happy clients</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-car"></i>
+        <div class="content">
+            <h3>5+ cars</h3>
+            <p>Different options</p>
+        </div>
+    </div>
+
+</section>
+
+<!--Vehical Section-->
+
+<section class="vehicles" id="vehicles">
+
+    <h1 class="heading"> Meet our <span> Awesome Fleet</span> </h1>
+    
+    <div class="swiper vehicles-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="Images/bike.svg" alt="">
+                <div class="content">
+                    <h3>Bike</h3>
+                    <div class="price"> Price : Rs 15 per km<span></span> </div>
+                    <p>
+                        Convenient
+                        <span class="fas fa-circle"></span> 1 person
+                        <span class="fas fa-circle"></span> Economic
+                        <span class="fas fa-circle"></span> petrol
+                        <span class="fas fa-circle"></span> Fast Travel
+                    </p>
+                    <a  href="RentalForm.html"class="btn">Book now</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="Images/micro.svg" alt="">
+                <div class="content">
+                    <h3>Micro</h3>
+                    <div class="price">Price: Rs 20 per km <span></span></div>
+                    <p>
+                        Comfortable
+                        <span class="fas fa-circle"></span> 4 people
+                        <span class="fas fa-circle"></span> Non Ac
+                        <span class="fas fa-circle"></span> petrol
+                        <span class="fas fa-circle"></span> less Luggage
+                    </p>
+                    <a href="RentalForm.html" class="btn">Book now</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="Images/prime sedan1.svg" alt="">
+                <div class="content">
+                    <h3>Prime sedan</h3>
+                    <div class="price">Price: Rs 22 per km </div>
+                    <p>
+                        new
+                        <span class="fas fa-circle"></span> 4 people
+                        <span class="fas fa-circle"></span> Ac/non Ac
+                        <span class="fas fa-circle"></span> petrol
+                        <span class="fas fa-circle"></span> Moderate Luggage
+                    <a href="RentalForm.html" class="btn">Book now</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="Images/prime sedan.svg" alt="">
+                <div class="content">
+                    <h3>Prime Suv</h3>
+                    <div class="price">Price: Rs 25 per km  <span></span></div>
+                    <p>
+                        new
+                        <span class="fas fa-circle"></span> 5 people
+                        <span class="fas fa-circle"></span> Ac\
+                        <span class="fas fa-circle"></span> petrol
+                        <span class="fas fa-circle"></span> Moderate Luggage
+                    </p>
+                    <a href="RentalForm.html" class="btn">Book now</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="Images/lux.svg" alt="">
+                <div class="content">
+                    <h3>Luxury</h3>
+                    <div class="price">Price: Rs 50 per km  <span></span> </div>
+                    <p>
+                        Spacious
+                        <span class="fas fa-circle"></span> 3 people
+                        <span class="fas fa-circle"></span> High class
+                        <span class="fas fa-circle"></span> Petrol
+                        <span class="fas fa-circle"></span> Fast Travel
+                    </p>
+                    <a href="RentalForm.html" class="btn">Book Now</a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+<section class="services" id="services">
+
+    <h1 class="heading"> Our <span>Features</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-envelope"></i>
+            <h3>Save Money</h3>
+            <p>Choosing the vehicle like Bike and Mini can prove to be economical</p>
+            <!--<a href="#" class="btn"> read more</a>-->
+        </div>
+
+        <div class="box">
+            <i class="fas fa-users"></i>
+            <h3>Gender of Driver</h3>
+            <p>User can select the either male or female driver</p>
+            <!--<a href="#" class="btn"> read more</a>-->
+        </div>
+
+        <div class="box">
+            <i class="fas fa-arrow-right"></i>
+            <h3>Saves alot of time</h3>
+            <p>Since it has a fast service its saves users time</p>
+            <!--<a href="#" class="btn"> read more</a>-->
+        </div>
+
+        <div class="box">
+            <i class="fas fa-gas-pump"></i>
+            <h3>Economic</h3>
+            <p>The fair depends on pertol and deseil cost price.</p>
+            <!--<a href="#" class="btn"> read more</a>-->
+        </div>
+
+        <div class="box">
+            <i class="fas fa-phone"></i>
+            <h3>Driver Details</h3>
+            <p>User can contact the driver with given details.</p>
+            <!--<a href="#" class="btn"> read more</a>-->
+        </div>
+
+        <div class="box">
+            <i class="fas fa-headset"></i>
+            <h3>24/7 support</h3>
+            <p>Our Services are provided to user 24/7</p>
+            <!--<a href="#" class="btn"> read more</a>-->
+        </div>
+
+    </div>
+
+</section>
+
+<!--Feature Cars-->
+
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <span>Car</span> options </h1>
+
+    <!--Micro and sedan cars-->
+    <div class="swiper featured-slider">
+
+       <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="Images/mini 1.png" alt="">
+                <div class="content">
+                    <h3>Maruti Alto </h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price"> -Micro- </div>
+                    <a href="RentalForm.html" class="btn">Check more</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="Images/mini 2.png" alt="">
+                <div class="content">
+                    <h3>Celerio</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price"> -Micro- </div>
+                    <a href="RentalForm.html" class="btn">Check more</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="Images/sedan 1.png" alt="">
+                <div class="content">
+                    <h3>Swift dizre</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price"> -Prime Sedan- </div>
+                    <a href="RentalForm.html" class="btn">Check more</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="Images/sedan 3.png" alt="">
+                <div class="content">
+                    <h3>Ciaz</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price"> -Prime Sedan- </div>
+                    <a href="RentalForm.html" class="btn">Check more</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="Images/sedan 2.png" alt="">
+                <div class="content">
+                    <h3>ignis</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price"> -Prime Sedan- </div>
+                    <a href="RentalForm.html" class="btn">Check more</a>
+                </div>
+            </div>
+
+            
+
+       </div>
+
+       <div class="swiper-pagination"></div>
+
+    </div>
+
+    <!--Bikes-->
+    <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+ 
+             <div class="swiper-slide box">
+                 <img src="Images/bike 1.webp" alt="">
+                 <div class="content">
+                     <h3>Bullet</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price"> -Bike- </div>
+                     <a href="RentalForm.html" class="btn">check more</a>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="Images/bike 2.jpg" alt="">
+                 <div class="content">
+                     <h3>Pulser</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price"> -Bike- </div>
+                     <a href="RentalForm.html" class="btn">check more</a>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="Images/bike 3.webp" alt="">
+                 <div class="content">
+                     <h3>Royal Enfield</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price"> -Bike- </div>
+                     <a href="RentalForm.html" class="btn">check more</a>>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="Images/bike 4.webp" alt="">
+                 <div class="content">
+                     <h3>Yamaha 120</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price"> -Bike- </div>
+                     <a href="RentalForm.html" class="btn">check more</a>
+                 </div>
+             </div>
+ 
+        </div>
+ 
+        <div class="swiper-pagination"></div>
+ 
+     </div>
+
+     <!--Suv Cars-->
+     <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+ 
+             <div class="swiper-slide box">
+                 <img src="Images/suv4.png" alt="">
+                 <div class="content">
+                     <h3>innova crysta</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price"> -Prime SUV- </div>
+                     <a href="RentalForm.html" class="btn">check now</a>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="Images/suv3.png" alt="">
+                 <div class="content">
+                     <h3>Ertiga</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price"> -Prime SUV- </div>
+                     <a href="RentalForm.html" class="btn">check now</a>
+                 </div>
+             </div>
+             <div class="swiper-slide box">
+                <img src="Images/suv 5.png" alt="">
+                <div class="content">
+                    <h3>TUV300</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price"> -Prime SUV- </div>
+                     <a href="RentalForm.html" class="btn">check now</a>
+                </div>
+            </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="Images/suv2.png" alt="">
+                 <div class="content">
+                     <h3>Fortuner</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price"> -Prime SUV- </div>
+                     <a href="RentalForm.html" class="btn">check now</a>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="Images/suv 1.png" alt="">
+                 <div class="content">
+                     <h3> Scropio</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price"> -Prime SUV- </div>
+                     <a href="RentalForm.html" class="btn">check now</a>
+                 </div>
+             </div>
+ 
+        </div>
+ 
+        <div class="swiper-pagination"></div>
+ 
+     </div>
+
+     <!--Lux Cars-->
+     <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+ 
+             <div class="swiper-slide box">
+                 <img src="Images/lux1.png" alt="">
+                 <div class="content">
+                     <h3>Volvo S90</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price"> -Luxury Cars- </div>
+                     <a href="RentalForm.html" class="btn">check now</a>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="Images/lux2.png" alt="">
+                 <div class="content">
+                     <h3>Audi e-tron GT</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price"> -Luxury Cars- </div>
+                     <a href="RentalForm.html" class="btn">check now</a>
+                 </div>
+             </div>
+             <div class="swiper-slide box">
+                <img src="images/lux 3.png" alt="">
+                <div class="content">
+                    <h3>Mercedes benz C class</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price"> -Luxury Cars- </div>
+                     <a href="RentalForm.html" class="btn">check now</a>
+                </div>
+            </div>
+ 
+        </div>
+ 
+        <div class="swiper-pagination"></div>
+ 
+     </div>
+
+</section>
+
+<section class="newsletter">
+    
+    <h3>subscribe for latest updates</h3>
+    <p>Enter your email address for more discounts, membership, offers and much more</p>
+
+   <form action="">
+        <input type="email" placeholder="enter your email">
+        <input type="submit" value="subscribe" >
+   </form>
+
+</section>
+
+
+
+<div id="footer"></div>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!--custom js link-->
+<script src="Javascript/script.js"></script>
+
+</body>
+</html>

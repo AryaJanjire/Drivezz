@@ -1,0 +1,214 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="CSS/newform.css">
+        <link rel="stylesheet" href="CSS/modal.css">
+
+        <style>
+            input[type="date"]::before { 
+	            content: attr(data-placeholder);
+	            width: 100%;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            input[type="date"]:focus::before,
+            input[type="date"]:valid::before { display: none 
+            }
+
+            input[type="time"]::before { 
+	            content: attr(data-placeholder);
+	            width: 100%;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            input[type="time"]:focus::before,
+            input[type="time"]:valid::before { display: none }
+
+            ::placeholder{
+                font-family: 'Times New Roman', Times, serif;
+                color: black;
+            }
+            body {font-family: Arial, Helvetica, sans-serif;}
+
+        </style>
+    </head>
+    <body>
+        <div class="form">
+            <div class="intracity-tab"><h2 style="text-align: center;">Drivzzz Rentals</h2></div>
+            <!--div onclick="changeTab(this)" data-tab="tab_outstation" class="outstation-tab">Outstation</div-->
+        <div class="body" id="form-body">
+            <div class="tab_intracity">
+              <form id="intracityform">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Name" required>
+                </div>
+                <div class="form-row">
+                    <input type="number" name="contact" placeholder="Contact Number" minlength="10" maxlength="10" required>
+                </div>
+                <div class="form-row">
+                    <input type="number" name="contact2" placeholder="Alternate Contact" minlength="10" maxlength="10" required> 
+                </div>
+                <div class="form-row">
+                    <input type="email" name="email" placeholder="Email address" required>
+                </div>
+                <div class="form-row" style="background-color: #11101D;
+                color: #ffffff;">
+                    <input type="date" id="depdate" name="departure" data-placeholder="Departure date" required>
+                    <input type="time"  name="dtime" data-placeholder="Departure time" required>
+                </div>
+                <div class="form-row" style="background-color: #11101D;
+                color: #ffffff;">
+                    <input type="date" id="retdate" name="return" data-placeholder="Return date" required>
+                    <input type="time"  name="rtime" data-placeholder="Return time" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" name="plocation" placeholder="Pick-up Location" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" name="dlocation" placeholder="Drop-off Location" required>
+                </div>
+                <div class="form-row" style="background-color: #11101D;
+                color: #ffffff;">
+                    <label for="drivership" id="lblvehicle">Choose a vehicle:</label>
+                    <select name="vehicle">
+                        <option>Micro</option>
+                        <option>Prime Sedan</option>
+                        <option>Prime SUV</option>
+                        <option>Luxury</option>
+                        <option></option>
+                    </select>
+                    <label for="fairprice">Fair Amount: </label>
+                    <textarea id="fairamnt"style="height:20px;" placeholder="Amount.."></textarea>
+                </div>
+                <div style="height:10px ;"></div>
+                <div class="form-row" style="background-color: #11101D;
+                color: #ffffff;">
+                    <label for="drivership" id="lbldriver">Drivership:</label>
+                    <select name="drivership">
+                        <option>Choose a option:</option>
+                        <option>Without driver</option>
+                        <option disabled>──────────</option>
+                        <option disabled>With driver</option>
+                        <option>Male Driver</option>
+                        <option>Female Driver</option>
+                    </select>
+                    <label for="triptype" id="lbltrip">Choose a trip:</label>
+                    <select name="trip">
+                        <option>Within city</option>
+                        <option>Outstation</option>
+                    </select>
+                </div>
+                <div class="form-row" style="margin-top:13px; background-color: #11101D;
+                color: #ffffff;">
+                    <h4>Submit your identity proof: </h4><input type="file" name="iddocument">
+                    <h4>Submit your address proof:</h4><input type="file" name="addrproof">
+                </div>
+                <div class="form-row">
+                    <input type="submit" name="submit" id="myBtn" value="Proceed for booking"> 
+                </div>
+                </form>
+            </div>
+          </div>
+        </div>
+        <div id="myModal" class="modal" style="padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Drivzzz Rentals</h2>
+              </div>
+              <div class="modal-body">
+                <p>
+                    <ul>
+                      <li>All the given prices are exclusive of GST (Goods and Service Tax).</li>
+                      <li>Available options of vehicles and driver can vary with the time.</li>
+                      <li> the present standard terms or conditions of rent of the Vehicle 
+                          which are the basis for rent and use of the Vehicle</li>
+                      <li> I have read all policies along with teh cancellation policy</li>
+                    </ul>
+                    <input type="checkbox" id="terms_and_conditions" value="1" onclick="terms_changed(this)"/>
+                    <label for="terms_and_conditions">I agree with the Terms and Conditions given in the policy</label>
+                    <a href="policy.html" style="float: right;">view policies for once</a>
+                </p>
+              </div>
+              <div class="modal-footer">
+                  <button type="submit" id="submit_button" disabled>Proceed for payment</button>
+              </div>
+            </div>
+          
+          </div>
+          
+        <script>
+            function terms_changed(termsCheckBox){
+    //If the checkbox has been checked
+    if(termsCheckBox.checked){
+        //Set the disabled property to FALSE and enable the button.
+        document.getElementById("submit_button").disabled = false;
+    } else{
+        //Otherwise, disable the submit button.
+        document.getElementById("submit_button").disabled = true;
+    }
+}
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+            var currentDateTime = new Date();
+            var year = currentDateTime.getFullYear();
+            var month = (currentDateTime.getMonth() + 1);
+            var date = (currentDateTime.getDate() + 1);
+
+            if(date < 10) {
+                date = '0' + date;
+            }
+            if(month < 10) {
+                month = '0' + month;
+            }
+
+            var dateTomorrow = year + "-" + month + "-" + date;
+            var checkinElem = document.querySelector("#depdate");
+            var checkoutElem = document.querySelector("#retdate");
+
+            checkinElem.setAttribute("min", dateTomorrow);
+
+                checkinElem.onchange = function () {
+                checkoutElem.setAttribute("min", this.value);
+            }
+
+            function changeTab(ref){
+                try {
+                    if(ref.getAttribute("data-tab") == "tab_intracity"){
+                    document.getElementById("form-body").classList.remove('active');
+                    ref.parentNode.classList.remove('tab_outstation');
+                } else {
+                    document.getElementById("form-body").classList.add('active');
+                    ref.parentNode.classList.add('tab_outstation');
+                }
+                } catch(msg){
+                    console.log(msg);
+                }
+            }
+        </script>
+    </body>
+</html>

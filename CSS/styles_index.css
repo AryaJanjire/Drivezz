@@ -1,0 +1,52 @@
+body
+{
+    /*margin: 0;*/
+    overflow-x: hidden;
+}
+
+.top-container
+{
+    background-image: url('/Images/CarImage1.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    padding-top: 35%; 
+}
+
+#various-cards
+{
+    padding: 250px;
+}
+.cards
+{
+    padding-top: 10%;
+}
+
+.card-bus
+{
+    padding-top: 50px;
+} 
+
+#drivez-features
+{
+    padding-top: 50px;
+    padding: 100px;
+}
+/* @media screen and (min-width: 768px)
+{
+    .top-container.search
+{
+    max-width: 440px;
+    margin: 0 auto; 
+}
+}
+
+ .top-container .search {
+    padding: 160px;
+} 
+
+@media screen and (min-width: 360px)
+{
+    .search{
+        font-size: 14px;
+    }
+} */

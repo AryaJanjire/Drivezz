@@ -1,0 +1,213 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+* {
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+  font-family:"Open Sans",sans-serif;
+}
+body {
+  /*background:#ddd;*/
+  background-image:url('/Images/rentbg2.jpg');
+  object-fit: cover;
+  font-size: 17px;
+}
+.form {
+  margin:0px;
+  padding:0px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:550px;
+  height:300px;
+  background-color: #11101D;
+  color: #ffffff;
+  /*box-shadow: 5px 5px 8px #11101D, 10px 10px 8px #0a58ca, 15px 15px 8px #11101D;
+  margin: 20px; */
+}
+.form .head {
+  width:100%;
+  height:55px;
+  display:flex;
+}
+.form .intracity-tab{
+  padding-top: 15px;
+}
+ h2{
+  margin-right: 30px;
+}
+.form .head > div {
+  width:50%;
+  height:100%;
+  text-align:center;
+  line-height:55px;
+  cursor:pointer;
+  background:transparent;
+  text-transform:uppercase;
+  font-size:15px;
+}
+.form .head.intracity > div:nth-child(1),.form .head > div:nth-child(2) {
+  background:#eee;
+  text-align: center;
+}
+.form .head.intracity > div:nth-child(2) {
+  background:transparent !important;
+}
+
+
+.form .body {
+  position:absolute;
+  overflow:hidden;
+  width:100%;
+  height:100%;
+}
+.form .body > div {
+  position:absolute;
+  width:100%;
+  height:100%;
+  transition:all 300ms ease-in-out;
+}
+.form .body input {
+  color-scheme: dark;
+}
+h4 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size:17px;
+  font-weight: normal;
+  margin-left: 10px;
+}
+.form .body .form-row input[type='submit']{
+  width: 100%;
+  font-size: 17px;
+  border: none;
+  height: 33px;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #0a58ca;
+  margin-bottom: 0px;
+  color: #ffffff;
+}
+.form .body .form-row input[type='text']  {
+  width: 100%;
+  border:none;
+  outline:none;
+  background-color: #11101D;
+  color: #ffffff;
+  height:40px;
+  text-indent:10px;
+  font-size:17px;
+}
+.form .body .form-row input::placeholder{
+  color: #ffffff;
+}
+.form .body .form-row input[type='number']  {
+  width: 100%;
+  border:none;
+  outline:none;
+  height:40px;
+  text-indent:10px;
+  font-size:17px;
+  background-color: #11101D;
+  color: #ffffff;
+}
+.form .body .form-row input[type='email']  {
+  width: 100%;
+  border:none;
+  outline:none;
+  height:40px;
+  text-indent:10px;
+  font-size:17px;
+  background-color: #11101D;
+  color: #ffffff;
+}
+.form .body .form-row input[type='file']  {
+  width: 100%;
+  border:none;
+  outline:none;
+  height:40px;
+  text-indent:10px;
+  font-size:17px;
+  background-color: #11101D;
+  color: #ffffff;
+}
+.form .body .form-row input[type='date']  {
+  width: 30%;
+  border:none;
+  outline:none;
+  height:40px;
+  text-indent:10px;
+  font-size:17px;
+  background-color: #11101D;
+  color: #ffffff;
+}
+.form .body .form-row input[type='time']  {
+  width: 30%;
+  border:none;
+  outline:none;
+  height:40px;
+  text-indent:10px;
+  font-size:17px;
+  margin-left: 50px;
+  background-color: #11101D;
+  color: #ffffff;
+}
+
+.form .body .form-row label {
+  border:none;
+  outline:none;
+  height:60px;
+  font-family: 'Times New Roman', Times, serif;
+  text-indent:10px;
+  font-size:17px;
+  margin-left: 10px;
+  background-color: #11101D;
+  color: #ffffff;
+}
+.form .body .signup .form-row #submit{
+  background-color:#11101D;
+}
+
+.form .body .row {
+  text-align:center;
+  padding:8px 0px;
+}
+.form .body .row span {
+  font-size:14px;
+  position:relative;
+  color:#222;
+  top:5px;
+  font-weight:600;
+}
+.form .body .footer {
+  position:absolute;
+  bottom:50px;
+  width:100%;
+  border-top:1px solid #ccc;
+}
+.form .body .footer > div.social-form {
+  float:left;
+  padding-left:50px;
+  width:100%;
+  height:40px;
+  line-height:40px;
+  text-indent:2%;
+  color:#fcfcfc;
+  position:relative;
+  font-size:14px;
+  cursor:pointer;
+}
+.form .body .footer i {
+  position:absolute;
+  width:40px;
+  height:40px;
+  left:0px;
+  line-height:40px;
+  background:rgba(0,0,0,0.3);
+  text-align:center;
+}
+.form .body .footer .fb {
+  background:#3b5998;
+}
+.form .body .footer .google {
+  background:tomato;
+}
